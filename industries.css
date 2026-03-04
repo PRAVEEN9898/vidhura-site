@@ -304,4 +304,80 @@ body {
   }
 }
 
+
 /* Footer Section */
+
+
+
+/* ================= FINAL MOBILE RESPONSIVE FIX ================= */
+
+@media (max-width: 768px) {
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .btn-orange {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* ================= HERO SECTION ================= */
+    .industries-hero {
+        height: auto;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* ================= INDUSTRIES GRID ================= */
+    .industries-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .industry-box {
+        padding: 25px;
+    }
+
+    /* ================= ADVANTAGES GRID ================= */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .advantage-box {
+        padding: 25px;
+    }
+
+    /* ================= SECTION HEADING ================= */
+    .advantages-title {
+        font-size: 28px;
+    }
+
+}
