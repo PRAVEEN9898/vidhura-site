@@ -1,0 +1,407 @@
+/* ================= GLOBAL RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+    color: #333;
+    padding-top: 80px; /* Reserve space for fixed navbar */
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    align-items: center;          /* Vertically center content */
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px;                 /* Fixed navbar height */
+    background: #ffffff;
+    position: fixed;              /* Keep navbar on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+/* LOGO */
+
+.navbar .logo img {
+    height: 60px;   /* Bigger logo */
+    width: auto;    /* Maintain aspect ratio */
+    display: block;
+}
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff7a00;
+}
+
+/* BUTTON */
+
+.btn-orange {
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #e56700;
+}
+
+/* ================= RESPONSIVE NAVBAR ================= */
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .btn-orange {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-orange {
+        align-self: center;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ================= OPTIONAL: NAVBAR SHADOW ON SCROLL ================= */
+.navbar.scrolled {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* ================= NAVBAR END ================= */
+
+
+
+
+/* ================= ABOUT HERO SECTION ================= */
+
+.about-hero {
+    background-color: #1f3c88;   /* Prime blue */
+    height: 50vh;                /* Large section height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about-hero-content h1 {
+    font-size: 55px;             /* Big heading */
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-hero-content p {
+    font-size: 20px;             
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.orange-text {
+    color: #ff6600; /* Orange color */
+    font-weight: bold; /* Optional to make it stand out */
+}
+
+/* ================= ABOUT HERO SECTION ================= */
+
+
+/* ================= VISION & MISSION SECTION ================= */
+
+.vision-mission {
+    display: flex;
+    justify-content: center;   /* Center horizontally */
+    gap: 60px;                 /* Equal spacing between boxes */
+    padding: 80px 8%;
+    background-color: #f4f7fc; /* Light background */
+}
+
+.vm-box {
+    background: #ffffff;
+    padding: 40px;
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.vm-box h2 {
+    font-size: 28px;
+    color: #1f3c88;  /* Prime blue */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.vm-box p {
+    color: #666666;  /* Grey description */
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ================= VISION & MISSION SECTION ================= */
+
+/* ================= LEADERSHIP SECTION ================= */
+
+.leadership {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 100px 8%;
+    background-color: #ffffff;
+}
+
+/* LEFT IMAGE */
+.leadership-image img {
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* RIGHT CONTENT */
+.leadership-content {
+    max-width: 550px;
+}
+
+/* Big Blue Heading */
+.leader-title {
+    font-size: 36px;
+    color: #1f3c88;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Orange Subheading */
+.leader-role {
+    font-size: 22px;
+    color: #ff7a00;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Grey Description */
+.leader-description {
+    color: #666666;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Orange Tick Points */
+.leader-points {
+    list-style: none;
+    padding: 0;
+}
+
+.leader-points li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 16px;
+}
+
+/* Custom Orange Tick */
+.leader-points li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ff7a00;
+    font-weight: bold;
+}
+
+/* ================= LEADERSHIP SECTION ================= */
+
+
+/* ================= WHY VIDURAI SECTION ================= */
+
+.why-started {
+    text-align: center;
+    padding: 100px 8%;
+    background-color: #f4f7fc;
+}
+
+/* Blue Heading */
+.why-title {
+    font-size: 34px;
+    color: #1f3c88;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Curved Border Box */
+.why-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;              /* Curved corners */
+    background-color: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* Grey Description */
+.why-box p {
+    color: #666666;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ================= WHY VIDURAI SECTION ================= */
+
+
+
+/* ================= CORE VALUES SECTION ================= */
+
+.core-values {
+    text-align: center;
+    padding: 100px 8%;
+    background-color: #ffffff;
+}
+
+.core-title {
+    font-size: 34px;
+    color: #1f3c88;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.core-subtitle {
+    color: #777777;
+    font-size: 18px;
+    margin-bottom: 60px;
+}
+
+/* Container for 3 boxes */
+.core-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Individual Box */
+.core-box {
+    background: #f4f7fc;
+    padding: 40px 30px;
+    width: 300px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Blue Circle with Number */
+.core-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #1f3c88;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto;
+}
+
+/* Box Heading */
+.core-box h3 {
+    font-size: 22px;
+    color: #1f3c88;
+    margin-bottom: 15px;
+}
+
+/* Box Description */
+.core-box p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ================= CORE VALUES SECTION ================= */
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-bottom-buttons {
+    margin-top: 10px;
+  }
+
+  .footer-bottom-buttons a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+/* Footer Section */

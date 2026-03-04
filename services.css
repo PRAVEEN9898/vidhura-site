@@ -1,0 +1,392 @@
+/* ================= GLOBAL RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+    color: #333;
+    padding-top: 80px; /* Reserve space for fixed navbar */
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    align-items: center;          /* Vertically center content */
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px;                 /* Fixed navbar height */
+    background: #ffffff;
+    position: fixed;              /* Keep navbar on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* subtle shadow */
+}
+
+/* LOGO */
+
+.navbar .logo img {
+    height: 60px;   /* Bigger logo */
+    width: auto;    /* Maintain aspect ratio */
+    display: block;
+}
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff7a00;
+}
+
+/* BUTTON */
+
+.btn-orange {
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #e56700;
+}
+
+/* ================= RESPONSIVE NAVBAR ================= */
+
+@media (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .btn-orange {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .btn-orange {
+        align-self: center;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ================= OPTIONAL: NAVBAR SHADOW ON SCROLL ================= */
+.navbar.scrolled {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+/* ================= NAVBAR END ================= */
+
+
+/* ================= ABOUT HERO SECTION ================= */
+
+.about-hero {
+    background-color: #1f3c88;   /* Prime blue */
+    height: 50vh;                /* Large section height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about-hero-content h1 {
+    font-size: 55px;             /* Big heading */
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-hero-content p {
+    font-size: 20px;             
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ================= ABOUT HERO SECTION ================= */
+
+/* ================= SERVICES SECTION ================= */
+.services-section {
+    padding: 100px 8%;
+    background: #f4f7fc;
+    text-align: center;
+}
+
+.services-title {
+    font-size: 36px;
+    color: #1f3c88;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.services-desc {
+    color: #666;
+    margin-bottom: 60px;
+    font-size: 16px;
+}
+
+/* GRID LAYOUT */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+/* Make last row 2 columns */
+.services-container .service-box:nth-last-child(2) {
+    grid-column: span 1;
+}
+
+/* SERVICE BOX */
+.service-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+}
+
+.service-box img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.service-box h3 {
+    color: #1f3c88;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+/* TICK POINTS */
+.service-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.service-box ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.service-box ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #ff7a00;
+    font-weight: bold;
+}
+
+/* ================= SERVICES SECTION ================= */
+
+
+/* ================= WHAT YOU GET SECTION ================= */
+.what-you-get-section {
+    padding: 100px 8%;
+    background: #f4f7fc;
+    text-align: center;
+}
+
+.what-you-get-title {
+    font-size: 36px;
+    color: #1f3c88; /* Prime blue */
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+/* GRID */
+.what-you-get-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* EACH BOX */
+.get-box {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+/* CIRCLE NUMBER */
+.circle-number {
+    width: 60px;
+    height: 60px;
+    background-color: #1f3c88; /* Prime blue */
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+
+/* BOX HEADING */
+.get-box h3 {
+    color: #1f3c88;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* BOX DESCRIPTION */
+.get-box p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ================= WHAT YOU GET SECTION ================= */
+
+
+
+/* ================= READY TO GET STARTED SECTION ================= */
+.cta-section {
+    background-color: #1f3c88; /* Prime blue background */
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.cta-section h2 {
+    font-size: 36px;
+    color: #ffffff; /* Big prime blue heading */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    color: #cccccc; /* Grey description */
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* CTA BUTTON */
+.cta-button {
+    background-color: #ff7a00; /* Orange button */
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e56700; /* Darker orange on hover */
+}
+
+/* ARROW INSIDE BUTTON */
+.cta-button .arrow {
+    font-size: 18px;
+}
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-bottom-buttons {
+    margin-top: 10px;
+  }
+
+  .footer-bottom-buttons a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+/* Footer Section */
+
