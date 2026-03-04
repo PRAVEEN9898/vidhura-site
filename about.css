@@ -404,4 +404,116 @@ body {
   }
 }
 
+
 /* Footer Section */
+
+
+
+
+/*Mobile view*/
+
+/* ================= FINAL MOBILE RESPONSIVE FIX ================= */
+
+@media (max-width: 768px) {
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .btn-orange {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* ================= HERO SECTION ================= */
+    .about-hero {
+        height: auto;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .about-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .about-hero-content p {
+        font-size: 16px;
+    }
+
+    /* ================= VISION & MISSION ================= */
+    .vision-mission {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .vm-box {
+        width: 100%;
+    }
+
+    /* ================= LEADERSHIP SECTION ================= */
+    .leadership {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .leadership-image img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .leadership-content {
+        max-width: 100%;
+    }
+
+    .leader-title {
+        font-size: 28px;
+    }
+
+    /* ================= WHY SECTION ================= */
+    .why-started {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .why-box {
+        padding: 30px 20px;
+    }
+
+    /* ================= CORE VALUES ================= */
+    .core-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .core-box {
+        width: 100%;
+        max-width: 350px;
+    }
+
+}
