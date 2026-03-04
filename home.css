@@ -130,93 +130,59 @@ body {
 
 /* ================= HERO SECTION ================= */
 
+
 .hero-section {
     position: relative;
-    height: 90vh;
+    min-height: calc(100vh - 80px);   /* changed from height to min-height */
 
-    /* Background image */
-    background: url("images/hero_section_img.webp") no-repeat center center/cover;
+    background-image: url("images/hero_section_img.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     display: flex;
     align-items: center;
 
-    padding-left: 8%; /* Proper left padding */
+    padding-left: 8%;
 }
 
-/* Dark overlay for faded effect */
+/* Dark overlay */
 .hero-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55); /* Controls fade level */
+    background: rgba(0, 0, 0, 0.55);
 }
 
-/* Keep text above overlay */
+/* Hero content */
 .hero-content {
     position: relative;
     color: white;
     max-width: 700px;
 }
 
-/* Big Heading */
+/* Heading */
 .hero-content h1 {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-/* Sub Heading */
 .hero-content h3 {
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
-/* Description */
 .hero-content h5 {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 30px;
 }
 
-/* Button container */
 .hero-buttons {
     display: flex;
     gap: 20px;
-}
-
-/* Orange Button */
-.btn-orange {
-    background: #ff7a00;
-    color: white;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.3s ease;
-}
-
-/* Dark Hover */
-.btn-orange:hover {
-    background: #cc5c00;
-}
-
-/* Transparent Button */
-.btn-transparent {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 12px 22px;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-/* Light Grey Hover */
-.btn-transparent:hover {
-    background: rgba(255, 255, 255, 0.2);
 }
 
 /* ================= HERO SECTION ================= */
@@ -871,3 +837,130 @@ body {
 }
 
 /* Footer Section */
+
+
+/* ================= FINAL MOBILE RESPONSIVE FIX ================= */
+
+@media (max-width: 768px) {
+
+    /* -------- GENERAL -------- */
+    body {
+        padding-top: 70px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* -------- NAVBAR -------- */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .btn-orange {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* -------- HERO SECTION -------- */
+    
+
+.hero-section {
+    position: relative;
+    min-height: calc(100vh - 70px);
+
+    padding: 60px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 100%;
+     margin: auto;
+}
+
+.hero-content h1 {
+    font-size: 28px;
+}
+
+.hero-content h3 {
+    font-size: 18px;
+}
+
+.hero-content h5 {
+    font-size: 14px;
+}
+
+.hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+}
+
+    /* -------- ABOUT SECTION -------- */
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    /* -------- SERVICES -------- */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* -------- WHY CHOOSE -------- */
+    .why-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* -------- INDUSTRIES -------- */
+    .industries-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* -------- CTA -------- */
+    .cta-title {
+        font-size: 26px;
+    }
+
+    .cta-description {
+        font-size: 14px;
+    }
+
+    /* -------- FOOTER -------- */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+}
