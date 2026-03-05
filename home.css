@@ -455,7 +455,7 @@ padding-top:70px;
 
 .navbar{
 flex-direction:column;
-height:50px;
+height:100px;
 padding:15px;
 }
 
@@ -528,4 +528,5 @@ text-align:center;
 }
 
 }
+
 
