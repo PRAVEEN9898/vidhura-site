@@ -470,4 +470,15 @@ text-align:center;
 margin:0 10px;
 }
 
+/* ONLY Quick Links inside footer */
+#footer .footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#footer .footer-column ul li a:hover {
+    color: #ff7a00;
+}
+
+  
 }
